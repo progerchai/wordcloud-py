@@ -3,7 +3,6 @@ import codecs
 import sys
 import pandas
 import numpy as np
-from wordcloud import WordCloud
 import imageio
 from wordcloud import WordCloud, ImageColorGenerator
 from os import listdir
@@ -25,6 +24,7 @@ def main(input_filename):
     words = []
     for seg in segs:
         word = seg.strip().lower()
+        print('words ===>',word)
         if len(word) > 1 and word not in stopwords:
             words.append(word)
 
